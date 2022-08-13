@@ -1,28 +1,26 @@
 
 <div id="<%= dom_id task %>">
   <div class="col-4 mb-4">
-<div class="card" style="width: 18rem;">
-  <h5 class="card-header card-title">
-    <strong><%= task.task_name %></strong>
-  </h5>
-  <div class="card-body">
+    <div class="card" style="width: 18rem;">
+      <h5 class="card-header card-title">
+        <strong><%= task.task_name %></strong>
+      </h5>
+      <div class="card-body">
 
-  <p class="card-text">
-    <strong>Date:</strong>
-    <%= task.task_date %>
-  </p>
+        <p class="card-text">
+          <strong>Date:</strong>
+          <%= task.task_date %>
+        </p>
 
-  <p class="card-text">
-    <strong>Description:</strong>
-    <%= task.task_desc %>
-  </p>
+        <p class="card-text">
+          <strong>Description:</strong>
+          <%= task.task_desc %>
+        </p>
+        
+        <%= link_to "Show", task, class: "card-link" %>
+        <%= link_to "Edit", edit_task_path(task), class: "card-link" %>
 
-
-    <%= link_to "Show", task, class: "card-link" %>
-    <%= link_to "Edit", edit_task_path(task), class: "card-link" %>
-
+      </div>
+    </div>
   </div>
-</div>
-</div>
-
 </div>

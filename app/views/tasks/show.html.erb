@@ -1,10 +1,28 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @task %>
+<div class="col-4 mb-4 mt-4 container">
+    <div class="card" style="width: 18rem;">
+      <h5 class="card-header card-title">
+        <strong><%= @task.task_name %></strong>
+      </h5>
+      <div class="card-body">
 
-<div>
-  <%= link_to "Edit this task", edit_task_path(@task) %> |
-  <%= link_to "Back to tasks", tasks_path %>
+        <p class="card-text">
+          <strong>Date:</strong>
+          <%= @task.task_date %>
+        </p>
 
-  <%= button_to "Complete", @task, method: :delete %>
-</div>
+        <p class="card-text">
+          <strong>Description:</strong>
+          <%= @task.task_desc %>
+        </p>
+        
+        <%= link_to "Edit", edit_task_path(@task), class: "card-link btn btn-outline-dark" %>
+  <%= link_to "Back", tasks_path, class: "card-link btn btn-outline-dark" %>
+
+  <%= button_to "Complete Task", @task, method: :delete, class: "card-link button_to btn btn-outline-success mt-2" %>
+
+      </div>
+    </div>
+  </div>
+

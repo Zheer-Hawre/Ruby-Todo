@@ -17,10 +17,10 @@
           <%= @task.task_desc %>
         </p>
         
-        <%= link_to "Edit", edit_task_path(@task), class: "card-link btn btn-outline-dark" %>
-  <%= link_to "Back", tasks_path, class: "card-link btn btn-outline-dark" %>
+          <%= link_to "Edit", edit_task_path(@task), class: "card-link btn btn-outline-dark" %>
+          <%= link_to "Back", tasks_path, class: "card-link btn btn-outline-dark" %>
 
-  <%= button_to "Complete Task", @task, method: :delete, class: "card-link button_to btn btn-outline-success mt-2" %>
+          <%= button_to "Complete Task", @task, method: :delete, class: "card-link button_to btn btn-outline-success mt-2" %>
 
       </div>
     </div>
